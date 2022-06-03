@@ -40,7 +40,13 @@ function addTodo(event){
     todoDiv.appendChild(trashButton)
 
     //APPEND TO LIST
-    todoList.appendChild(todoDiv)
+    if(todoInput.value === ""){
+        console.log("yes")
+        void(0)
+    }else{
+        todoList.appendChild(todoDiv)
+    }
+    
     //Clear Todo Input Value
     todoInput.value = "";
 }
@@ -102,8 +108,14 @@ function saveLocalTodos(todo){
         todos = JSON.parse(localStorage.getItem("todos"));
     }
 
-    todos.push(todo);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    if(todoInput.value === ""){
+        void(0)
+    }else{
+        todos.push(todo);
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }
+
+    
 } 
 
 function getTodos(){
