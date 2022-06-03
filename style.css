@@ -15,6 +15,10 @@ header{
     font-size: 1.5rem;
 }
 
+form{
+    margin-bottom: 4em;
+}
+
 header,
 form{
     min-height: 20vh;
@@ -33,14 +37,14 @@ form button{
 }
 
 form button{
-    color: #fda085;
+    color: #0619be;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover{
-    background: #fda085;
+    background: #0619be;
     color: white;
 }
 
@@ -74,7 +78,7 @@ form button:hover{
 
 .trash-btn,
 .complete-btn{
-    background: #ff6f47;
+    background: #0619be;
     border: none;
     color: white;
     padding: 1rem;
@@ -120,16 +124,17 @@ select{
 }
 
 select{
-    color: #ff6f47;
+    color: rgb(73, 204, 73);
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
+    font-size: 1rem;
 }
 
 .select::after{
     content: "\25BC";
     position: absolute;
-    background: #ff6f47;
+    background: #0619be;
     top: 0;
     right: 0;
     padding: 1rem;
@@ -138,5 +143,5 @@ select{
 
 .select:hover::after{
     background: white;
-    color: #ff6f47;
+    color: #0619be;
 }
